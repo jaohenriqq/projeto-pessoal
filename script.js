@@ -9,8 +9,11 @@ function nomeUsuario(information){
     return(newaccount.unshift(information))
 }
 
-
-
+function searchname(busca) {
+return function (user){
+  return newaccount.nome==busca
+}
+}
 
 do{let pick = prompt(`a quantidade de  usuários cadastrados são:\n ${newaccount.length}\n\n1-cadastrar novo usuário\n2-pesquise pelo nome o usuário cadastrado\n3-editar usuário\n4-SAIR `)
 if(pick ==1){
@@ -31,14 +34,40 @@ nomeUsuario(information)
 else if  (pick==2){
 
     let busca = prompt('qual o nome da conta que você procura?')
-     let user =  newaccount.find(newaccount=>newaccount.nome==busca)
-if(user){
-  alert  (`${user.nome}\n${user.email}\n${user.senha}`)
+     let user = newaccount.find(searchname)
+    alert  (`${user.nome}\n${user.email}\n${user.senha}`)
+
+
+
+
+  
+}
+else if (pick==3){
+  let busca = prompt('?')
+  let user = newaccount.find(searchname)
 
 }
-    
 
 }
-}
+
 while(pick=4)
 
+
+
+/*
+1Excluir Usuário:
+
+Permita ao usuário remover um cadastro do sistema pelo nome.
+
+
+2Autenticação:
+
+Permita que os usuários façam login usando e-mail e senha, verificando as credenciais.
+
+3Atualizar Email ou Senha:
+
+Adicione opções para que o usuário possa atualizar seu e-mail ou senha separadamente.
+
+4Recuperação de Senha:
+
+Implemente uma funcionalidade para recuperação de senha via e-mail.*/
