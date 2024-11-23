@@ -12,10 +12,14 @@ function searchname(busca) {
 return function (user){
   return user.nome==busca
 }
-}function deletname(buscador){
+}
+function deletname(buscador){
     return function(conta){
         return conta.nome && passaword==buscador
     }
+}
+function login (busca1){
+
 }
 
 do{let pick = prompt(`a quantidade de  usuários cadastrados são:\n ${newaccount.length}\n\n1-cadastrar novo usuário\n2-pesquise pelo nome o usuário cadastrado\n3-mudar senha\n4-fazer login\n5-SAIR `)
@@ -49,10 +53,7 @@ else if (pick==3){
 else if (pick=4){
     let login = prompt('qual o email da sua conta?')
     let senha = prompt('qual a sua senha?')
-    if(login==information.email && senha == information.senha){
-        alert('login realizado!')
-    
-    }
+    let contaLogin
 }
 }
 
