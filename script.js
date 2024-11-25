@@ -46,29 +46,12 @@ else if (pick==3){
   user.senha=prompt('qual sua nova senha?')
   alert('senha alterada!')
   }
+
+  else{alert('senha incorreta!')
+
+  }
 }
-  else{alert('senha incorreta!')}
 }
 }
 
 while(true)
-
-
-
-/*
-1Excluir Usuário:
-
-Permita ao usuário remover um cadastro do sistema pelo nome.
-
-
-2Autenticação:
-
-Permita que os usuários façam login usando e-mail e senha, verificando as credenciais.
-
-3Atualizar Email ou Senha:
-
-Adicione opções para que o usuário possa atualizar seu e-mail ou senha separadamente.
-
-4Recuperação de Senha:
-
-Implemente uma funcionalidade para recuperação de senha via e-mail.*/
