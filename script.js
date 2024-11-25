@@ -12,11 +12,7 @@ function searchname(busca) {
 return function (user){
   return user.nome==busca
 }
-}
-function deletsenha(buscador){
-    return function(conta){
-        return conta.senha==password
-    }
+
 } 
 
 do{let pick = prompt(`a quantidade de  usuários cadastrados são:\n ${newaccount.length}\n\n1-cadastrar novo usuário\n2-pesquise pelo nome o usuário cadastrado\n3-mudar senha\n4-SAIR `)
@@ -32,23 +28,30 @@ nomeUsuario(information)
 else if  (pick==2){
     let busca = prompt('qual o nome da conta que você procura?')
     let user = newaccount.find(searchname(busca))
-    alert  (`NOME:${user.nome}\nE-MAIL:${user.email}\nSENHA:${user.senha}`)
+    if(user){
+        alert  (`NOME:${user.nome}\nE-MAIL:${user.email}\nSENHA:${user.senha}`)
+    }
+else{
+    alert('usuario nao encontrado!')
+}
 
 }
 else if (pick==3){
-  let buscador = prompt('qual o nome da conta do usuário que você está procurando?')
-  let conta = newaccount.find(deletname(buscador))
-  if(conta){
+  let busca = prompt('qual o nome da conta do usuário que você está procurando?')
+  let user = newaccount.find(searchname(busca))
+  if(user){
     let password=prompt('digite a senha antiga:')
+  
+  if(password === user.senha){
+  user.senha=prompt('qual sua nova senha?')
+  alert('senha alterada!')
   }
-  if(password==conta.senha){
-  let newpassword= prompt('qual sua nova senha')
-  }
+}
   else{alert('senha incorreta!')}
 }
 }
 
-while(pick=5)
+while(true)
 
 
 
