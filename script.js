@@ -46,11 +46,10 @@ else if (pick==3){
   user.senha=prompt('qual sua nova senha?')
   alert('senha alterada!')
   }
-
-  else{alert('senha incorreta!')
-
-  }
 }
+  else{alert('senha incorreta!')
+ }
+
 }
 }
 
