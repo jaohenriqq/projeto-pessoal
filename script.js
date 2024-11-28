@@ -57,4 +57,4 @@ else if (pick==3){
 }
 }
 
-while(pick!=4)
+while(true)
