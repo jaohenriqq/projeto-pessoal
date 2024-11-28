@@ -15,7 +15,8 @@ return function (user){
 
 } 
 
-do{let pick = prompt(`a quantidade de  usuários cadastrados são:\n ${newaccount.length}\n\n1-cadastrar novo usuário\n2-pesquise pelo nome o usuário cadastrado\n3-mudar senha\n4-SAIR `)
+do{
+    let pick = prompt(`a quantidade de  usuários cadastrados são:\n ${newaccount.length}\n\n1-cadastrar novo usuário\n2-pesquise pelo nome o usuário cadastrado\n3-mudar senha\n4-SAIR `)
 if(pick ==1){
  let information= {
   nome:prompt('qual o nome do usuário?'),
@@ -42,17 +43,18 @@ else if (pick==3){
   if(user){
     let password=prompt('digite a senha antiga:')
   
-  if(password === user.senha){
+  if(password === user.senha)
+  {
   user.senha=prompt('qual sua nova senha?')
   alert('senha alterada!')
   }
 
-  else{alert('senha incorreta!')
-
+  else{
+      alert('senha incorreta!')
   }
 }
 
 }
 }
 
-while(true)
+while(pick!=4)
