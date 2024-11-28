@@ -55,6 +55,10 @@ else if (pick==3){
 }
 
 }
+else if(pick==4){
+  alert('Programa encerrado!')
+  break;
+}
 }
 
 while(true)
